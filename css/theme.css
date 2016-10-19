@@ -1,0 +1,198 @@
+/* Basic styles
+-------------------------------------------------*/
+body {
+	font-family: "Roboto",Arial,sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	background: #fefefe;
+	color: #3d596d;
+}
+
+a {
+	color: #369bc8;
+}
+
+a:hover,a:focus, .content-area a:visited:hover {
+	color: #2e4453;
+	text-decoration: none;
+}
+
+h1 a:visited, h2 a:visited , h3 a:visited  {
+    color: #2a5d84;
+}
+
+
+/* Heading Styles
+-------------------------------------------------*/
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-weight: 700;
+	margin-top: 1.3rem;
+	margin-bottom: 1.3rem;
+}
+
+h1,.h1 {
+	font-size: 2.143rem;
+}
+
+h2,.h2 {
+	font-size: 1.786rem;
+}
+
+h3,.h3 {
+	font-size: 1.429rem;
+}
+
+h4,.h4 {
+	font-size: 1.143rem;
+}
+
+
+/* WordPress specific style
+-------------------------------------------------*/
+.gallery-caption, .wp-caption-text {
+    font-size: 14px;
+    color: #818a91;
+    line-height: 1.4;
+    margin-top: -.8rem;
+}
+
+.wrapper #wrapper-sticky {
+	border-bottom: 1px solid #818a91;
+}
+
+/* Footer Styles
+-------------------------------------------------------	*/
+#wrapper-footer {
+	background-color: #efeee5;
+}
+
+
+/* Navigation Styles
+-------------------------------------------------------	*/
+#site-navigation  {
+	/* background: #eceeef; */
+}
+
+#wrapper-header {
+    background: #ebeef0;
+    /* border-bottom: 2px solid #e7e7e7; */
+    transition: all 0.3s ease-in-out;
+}
+
+#wrapper-navbar .navbar {
+	border-radius: 0;
+}
+
+.site-logo {
+    padding-top: .25rem;
+}
+
+.navbar-brand {
+    margin: 0;
+    float: none;
+    padding-top: 1rem;
+}
+
+.site-title {
+    font-size: 2.143rem;
+    line-height: 1;
+    color: #2e4453;
+    font-weight: 700;
+}
+
+.site-tagline {
+    line-height: 1;
+    color: #2e4453;
+}
+
+/* Container
+-------------------------------------------------------	*/
+.container-fluid {
+	max-width: 1140px;
+}
+
+.wrapper {
+	padding-top: 2rem;
+}
+
+#primary {
+    padding-bottom: 2rem;
+}
+
+/* Content
+-------------------------------------------------------	*/
+.site-main {
+    font-size: 17px;
+}
+
+.entry-title {
+    margin-top: 0;
+    line-height: 1.258;
+    margin-bottom: .5rem;
+}
+
+.entry-title a {
+    color: #2e4453;
+}
+
+.entry-title a:hover, .entry-title a:focus {
+    color: #2a5d84;
+}
+
+.archive-title {
+    font-size: 22px;
+    font-size: 1.571rem;
+    margin-bottom: .65rem;
+}
+
+#wrapper-index article {
+	margin-bottom: 1.5rem;
+}
+
+/* Widget Styles
+-------------------------------------------------------	*/
+.widget-title, .widgettitle {
+    font-size: 18px;
+	font-size: 1.286rem;
+	color: #2e4453;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    margin-top: 0;
+}
+
+.widget ul {
+	font-size: 16px;
+}
+
+#secondary .widget ul li {
+	border-bottom: 1px solid #F2F2F2;
+}
+
+/* Bootstrap Fixes
+-------------------------------------------------------	*/
+.btn-primary {
+	background-color: #3d596d;
+	border-color: #3d596d;
+}
+
+.btn-primary:hover {
+	background-color: #369bc8;
+	border-color: #369bc8;
+}
+
+/* Responsive Styles
+-------------------------------------------------------	*/
+
+@media (min-width: 768px) {
+	#primary {
+		padding-right: 1.3rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.container-fluid {
+		padding-right: 1.3rem;
+		padding-left: 1.3rem;
+	}
+}

@@ -1,0 +1,377 @@
+/* Warning ! 
+* This file contain the very essential fixes for WordPress and Bootstrap. Some are to keep
+* the theme check happy and others to maintain consistency across the site and 
+* prevent from layout breaking that you might not want to edit. 
+* But of course you are allowed to edit it in your need.
+*
+* We separated this CSS to maintain consistency with any other CSS design you 
+* will integrate with this theme.
+-------------------------------------------------*/
+
+body {
+	word-wrap: break-word;
+}
+
+/* Some nice typographical defaults. 
+* Credit: http://www.newnet-soft.com/blog/csstypography
+-------------------------------------------------*/
+p {
+	-ms-word-break: break-all;
+	-ms-word-wrap: break-all;
+	word-break: break-word;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	-webkit-hyphenate-before: 2;
+	-webkit-hyphenate-after: 3;
+	hyphenate-lines: 3;
+	-webkit-font-feature-settings: liga,dlig;
+	-moz-font-feature-settings: "liga=1,dlig=1";
+	-ms-font-feature-settings: liga,dlig;
+	-o-font-feature-settings: liga,dlig;
+	font-feature-settings: liga,dlig;
+}
+
+figure, img, .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+input,select {
+	max-width: 100%;
+}
+
+/* Remove this if you have a block-quote and cite style
+-------------------------------------------------*/
+blockquote {
+	background: #f9f9f9;
+	border-left: 10px solid #eceeef;
+	margin: 1.5em 10px;
+	padding: .5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: .1em;
+	margin-right: .25em;
+	vertical-align: -.4em;
+}
+
+blockquote p {
+	display: inline;
+}
+
+blockquote cite {
+	color: #818a91;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+
+blockquote cite:before {
+	content: "\2014 \2009";
+}
+
+cite {
+	color: #818a91;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+q {
+	quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+	content: open-quote;
+}
+
+q:after {
+	content: close-quote;
+}
+
+/* WordPress specific style
+-------------------------------------------------*/
+.sticky {
+    background-color: #ebeef0;
+    padding: 14px 18px;
+}
+
+.bypostauthor {
+}
+
+.gallery-icon img {
+	margin-bottom: 0;
+}
+
+.entry-footer span {
+    padding-right: 10px;
+    display: block;
+}
+
+.skip-link {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+/* Responsive Navigation Styles
+-------------------------------------------------------	*/
+@media (min-width: 768px) {
+	#unmarkedNav {
+		display: table;
+	}
+
+	/**
+	.sm-custom {
+		display: table-row;
+	}
+
+	.sm-custom li {
+		display: table-cell;
+	}**/
+
+	.sm-custom a {
+		white-space: inherit;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-header {
+		background: #2e4453;
+		color: #fff;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+
+	.navbar-text {
+		float: left;
+		font-size: 1.2rem;
+		line-height: 1.2;
+	}
+
+	.navbar-toggler {
+		padding: 0;
+		font-size: 1.4rem;
+		color: #ffffff;
+		line-height: 1;
+		border-radius: 0;
+		float: right;
+	}
+
+	.navbar-toggler:focus,.navbar-toggler:hover {
+		outline: none;
+	}
+
+	#site-navigation {
+		top: 43px;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		background: #eceeef;
+		z-index: 99999;
+	}
+	
+	.admin-bar #site-navigation {
+		top: 89px;
+	}
+
+	.navbar {
+		padding: .5rem 0;
+	}
+}
+
+/* Content Fixes
+-------------------------------------------------------	*/
+
+.entry-meta {
+	font-size: 1rem;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+
+.entry-content,.entry-content p {
+	overflow: hidden;
+}
+
+.content-area figure,.content-area img {
+	margin-bottom: 1rem;
+}
+
+.navigation .screen-reader-text {
+    margin-bottom: .5rem;
+    font-size: inherit;
+}
+
+/* Widget Fixes
+-------------------------------------------------------	*/
+.widget ul {
+	padding: 0;
+}
+
+.widget ul li {
+	list-style: none;
+	padding-bottom: .5rem;
+	padding-bottom: .5rem;
+}
+
+#wp-calendar caption {
+	caption-side: inherit;
+	padding-top: 0;
+}
+
+/* You may not need comment section if not developing 
+* something blog type but keep this style to maintain 
+* consistency
+-------------------------------------------------------	*/
+.comments-title {
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+#comments p {
+	margin-bottom: 0;
+}
+
+#comments .logged-in-as {
+	font-size: 14px;
+}
+
+.comment-metadata {
+	font-size: 13px;
+	line-height: 1.2;
+	margin-bottom: 3px;
+}
+
+.comment-reply-title {
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.comment .reply {
+	font-size: 14px;
+}
+
+ol.comment-list {
+	list-style: none;
+	margin: 0 0 1em;
+	padding: 0;
+	text-indent: 0;
+}
+
+ol.comment-list .children li.comment {
+	padding-bottom: .3rem;
+}
+
+ol.comment-list li.comment {
+	border-top: 1px solid #F2F2F2;
+	padding: 1em 1em 1em 0;
+}
+
+.comment .vcard .fn {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.comment .vcard .avatar {
+	float: left;
+	margin: 6px 1em 1em 0;
+	border-radius: 4px;
+}
+
+.comment .comment-meta {
+	font-size: 12px;
+}
+
+ol.comment-list li.comment ul {
+	margin: 0 0 1em 2em;
+}
+
+ol.comment-list li.comment .children {
+	list-style: none;
+	margin: 1em 0 0;
+	text-indent: 0;
+}
+
+/* Bootstrap Fixes
+-------------------------------------------------------	*/
+.p-b-d {
+	padding-bottom: .9375rem;
+}
+
+.pagination li > a, .pagination li > span {
+    border-radius: 0;
+    padding: 1px 14px;
+    margin-bottom: .25rem;
+}
+
+.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
+    background-color: #3d596d;
+    border-color: #3d596d;
+}
+
+.page-link {
+    color: #3d596d;
+}
+
+.breadcrumb {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+/* Responsive Styles
+-------------------------------------------------------	*/
+
+@media (min-width: 768px) {
+	#wrapper-header {
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+	}
+
+	.entry-content .alignleft,.entry-content img.alignleft {
+		margin-right: 1rem;
+		display: inline;
+		float: left;
+	}
+
+	.entry-content .alignright,.entry-content img.alignright {
+		margin-left: 1rem;
+		display: inline;
+		float: right;
+	}
+
+	.entry-content .aligncenter,.entry-content img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-brand {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		display: block;
+		text-align: center;
+	}
+	
+	.entry-content .alignleft, .entry-content img.alignleft, .entry-content .alignright,.entry-content img.alignright, .entry-content .aligncenter,.entry-content img.aligncenter  {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
